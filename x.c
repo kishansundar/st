@@ -685,7 +685,9 @@ brelease(XEvent *e)
 
 	if (mouseaction(e, 1))
 		return;
-	if (e->xbutton.button == Button1)
+	if (e->xbutton.button == Button3)
+ 		selpaste(NULL);
+ 	else if (e->xbutton.button == Button1)
 		mousesel(e, 1);
 }
 
@@ -714,7 +716,6 @@ cresize(int width, int height)
 	row = (win.h - 2 * borderpx) / win.ch;
 	col = MAX(1, col);
 	row = MAX(1, row);
-
 	tresize(col, row);
 	xresize(col, row);
 	ttyresize(win.tw, win.th);
@@ -1683,7 +1684,7 @@ xsetmode(int set, unsigned int flags)
 int
 xsetcursor(int cursor)
 {
-	DEFAULT(cursor, 1);
+	DEFAULT(cursor, 5);
 	if (!BETWEEN(cursor, 0, 6))
 		return 1;
 	win.cursor = cursor;
