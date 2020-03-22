@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Dank Mono:size=14:antialias=true:autohint=true";
-static int borderpx = 25;
+static int borderpx = 15;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -122,7 +122,7 @@ static const char *colorname[] = {
  */
  unsigned int defaultbg = 0;
  unsigned int defaultfg = 257;
- static unsigned int defaultcs = 258;
+ static unsigned int defaultcs = 257;
  static unsigned int defaultrcs= 258;
 
 
@@ -133,7 +133,7 @@ static const char *colorname[] = {
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 4;
+static unsigned int cursorshape = 2;
 
 /*
  * Default columns and rows numbers
