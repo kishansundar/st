@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Dank Mono:size=14:antialias=true:autohint=true";
+static char *font = "Hack:size=14:antialias=true:autohint=true";
 static int borderpx = 10;
 
 /*
